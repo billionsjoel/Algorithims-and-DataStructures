@@ -1,11 +1,4 @@
 function compareTriplets(a, b) {
-	// Write your code here
-	//a[(5, 6, 7)];
-	//b[(3, 6, 10)];
-
-
-	//forloop to store my indicies
-
 	for (let i = 0; i <= 2; i++) {
 		//compare value at a[index] === b[index]
 		if (a[i] > b[i]) {
@@ -17,12 +10,8 @@ function compareTriplets(a, b) {
 			pointA += 0;
 		}
 	}
-	console.log(pointA);
-	console.log(pointB);
-	console.log(`${pointA}, ${pointB}`);
-	//console.log(finArr.push(pointA));
-
 	//return arr with total points for each input arr[pointsA , pointsB]
+	return [pointA, pointB];
 }
 
 compareTriplets([17, 28, 30], [99, 16, 8]);
