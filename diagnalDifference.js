@@ -1,15 +1,17 @@
 function diagonalDifference(arr) {
 	// Write your code here
-	const n = arr.splice(0, 1);
+	const n = arr.length;
+	let leftD,
+		rightD = 0;
+	for (let i = 0; i < n; i++) {
+		for (let j = 0; j < n; j++) {
+			leftD = arr[0][0] + arr[1][1] + arr[2][2];
+			rightD = arr[2][0] + arr[1][1] + arr[0][2];
+		}
+	}
 
-	let row1 = arr.splice(0, 3);
-	let row2 = arr.splice(0, 3);
-	let row3 = arr.splice(0, 3);
-
-	let left = row1[0] + row2[1] + row3[2];
-	let right = row1[2] + row2[1] + row3[0];
-
-	return Math.abs(left - right);
+	console.log(Math.abs(leftD - rightD));
+	//console.log(row2[1][1]);
 }
 
 diagonalDifference([
