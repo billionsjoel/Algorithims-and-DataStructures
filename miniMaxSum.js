@@ -1,6 +1,5 @@
 function miniMaxSum(arr) {
 	// Write your code here
-	let finArr = [];
 	let sorted = arr.sort();
 	function reduce(a, b) {
 		return a + b;
