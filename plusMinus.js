@@ -16,8 +16,8 @@ function plusMinus(arr) {
 		}
 	}
 
-	console.log(postive / arr.length);
-	console.log(negative / arr.length);
-	console.log(zero / arr.length);
+	console.log((postive / arr.length).toFixed(6));
+	console.log((negative / arr.length).toFixed(6));
+	console.log((zero / arr.length).toFixed(6));
 }
 plusMinus([-4, 3, -9, 0, 4, 1]);
