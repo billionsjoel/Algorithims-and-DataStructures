@@ -5,7 +5,8 @@ function miniMaxSum(arr) {
 	function reduce(a, b) {
 		return a + b;
 	}
-	console.log(sorted);
+	let min = sorted.slice(0, 4).reduce(reduce, 0);
+	console.log(min);
 }
 
 miniMaxSum([1, 2, 3, 4, 5]);
