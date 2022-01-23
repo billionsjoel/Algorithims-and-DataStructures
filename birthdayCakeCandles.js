@@ -4,15 +4,18 @@ function birthdayCakeCandles(candles) {
 	let copyArr = candles;
 	//get all candles ?
 	//sort the candles
-	let sorted = candles.sort();
-	console.log(sorted);
+	let sorted = copyArr.sort();
+	//console.log(sorted);
 
 	//get the last candle
-	let lastCandle = copyArr.pop();
-	console.log(lastCandle);
+	let lastCandle = sorted[sorted.length - 1];
+	//console.log(lastCandle);
 
 	//loop through all candles and count everytime you meet tallest candle
+	for (let i = 0; i <= candles.length; i++) {
+		if (candles[i] === lastCandle) count++;
+	}
 
-	//return count
+	console.log(count);
 }
-birthdayCakeCandles([3, 2, 1, 3]);
+birthdayCakeCandles([3, 2, 1, 3, 3]);
