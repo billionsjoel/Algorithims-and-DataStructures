@@ -1,21 +1,16 @@
 function birthdayCakeCandles(candles) {
 	// Write your code here
-	let count = 0;
-	let copyArr = candles;
-	//get all candles ?
-	//sort the candles
-	let sorted = copyArr.sort();
-	//console.log(sorted);
+	let max = 0;
+	let counter = 0;
 
-	//get the last candle
-	let lastCandle = sorted[sorted.length - 1];
-	//console.log(lastCandle);
-
-	//loop through all candles and count everytime you meet tallest candle
-	for (let i = 0; i <= candles.length; i++) {
-		if (candles[i] === lastCandle) count++;
-	}
-
-	console.log(count);
+	candles.forEach((item) => {
+		if (item > max) {
+			max = item;
+			counter = 1;
+		} else if (item === max) {
+			counter++;
+		}
+	});
+	console.log(counter);
 }
 birthdayCakeCandles([3, 2, 1, 3, 3]);
