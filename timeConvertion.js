@@ -3,7 +3,6 @@ function timeConversion(s) {
 	let S = '';
 	// convert time into arr
 	const time = s.split(':');
-	const newTime = [];
 	// check last array value for am or pm
 	const lastEl = time[time.length - 1];
 	//console.log(lastEl.split(','));
@@ -71,8 +70,5 @@ function timeConversion(s) {
 	}
 }
 
-//return new string;
-
-//console.log(newTime);
 
 timeConversion('02:34:50PM');
