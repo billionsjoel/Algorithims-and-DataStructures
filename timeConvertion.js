@@ -6,12 +6,13 @@ function timeConversion(s) {
 
 	// check last array value for am or pm
 	const lastEl = time[time.length - 1];
+	const checkLastEl = lastEl.split('');
 
 	// if pm leave time as it is else reset time with a switch case to start from 00;
 
 	//return new string;
 
-	console.log(lastEl);
+	console.log(checkLastEl);
 }
 
 timeConversion('07:05:45PM');
