@@ -1,9 +1,14 @@
 function timeConversion(s) {
 	// Write your code here
+
+	/* I also realised that you can just
+   * add 12 to any time that has PM on it
+	 * and only catch edge cases e,g for 12
+ 	 */
+
 	let S = '';
 	// convert time into arr
 	const time = s.split(':');
-	const newTime = [];
 	// check last array value for am or pm
 	const lastEl = time[time.length - 1];
 	//console.log(lastEl.split(','));
@@ -71,8 +76,5 @@ function timeConversion(s) {
 	}
 }
 
-//return new string;
-
-//console.log(newTime);
 
 timeConversion('02:34:50PM');
