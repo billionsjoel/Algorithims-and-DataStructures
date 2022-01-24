@@ -15,7 +15,9 @@ function timeConversion(s) {
 	// if pm leave time as it is else reset time with a switch case to start from 00;
 
 	if (checkLastEl.includes('A') && time[0] < 12) {
-		console.log(s);
+		time.pop();
+		time.push(seconds);
+		console.log(time.join(':'));
 	} else {
 		// reset the hours
 		if (time[0] === '07') {
@@ -58,4 +60,4 @@ function timeConversion(s) {
 
 //console.log(newTime);
 
-timeConversion('08:05:15PM');
+timeConversion('06:40:03AM');
