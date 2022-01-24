@@ -14,22 +14,22 @@ function timeConversion(s) {
 		console.log(s);
 	} else {
 		// reset the hours
-		if (time[0] == 07) {
+		if (time[0] === 07) {
 			time.unshift('19');
 		}
-		if (time[0] == 08) {
+		if (time[0] === 08) {
 			time.unshift('20');
 		}
-		if (time[0] == 09) {
+		if (time[0] === 09) {
 			time.unshift('21');
 		}
-		if (time[0] == 10) {
+		if (time[0] === 10) {
 			time.unshift('22');
 		}
-		if (time[0] == 11) {
+		if (time[0] === 11) {
 			time.unshift('23');
 		}
-		if (time[0] == 12 && checkLastEl.includes('A')) {
+		if (time[0] === 12 && checkLastEl.includes('A')) {
 			time.unshift('00');
 		}
 
