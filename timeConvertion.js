@@ -12,8 +12,6 @@ function timeConversion(s) {
 		.splice(0, Math.ceil(checkLastEl.length / 2))
 		.join('');
 
-	console.log(seconds);
-
 	// if pm leave time as it is else reset time with a switch case to start from 00;
 
 	if (checkLastEl.includes('A') && time[0] < 12) {
@@ -22,23 +20,33 @@ function timeConversion(s) {
 		// reset the hours
 		if (time[0] === '07') {
 			time.unshift('19');
-			//console.log(seconds);
-			console.log(time);
+			time.pop();
+			time.push(seconds);
 		}
 		if (time[0] === '08') {
 			time.unshift('20');
+			time.pop();
+			time.push(seconds);
 		}
 		if (time[0] === '09') {
 			time.unshift('21');
+			time.pop();
+			time.push(seconds);
 		}
 		if (time[0] === '10') {
 			time.unshift('22');
+			time.pop();
+			time.push(seconds);
 		}
 		if (time[0] === '11') {
 			time.unshift('23');
+			time.pop();
+			time.push(seconds);
 		}
 		if (time[0] === '12' && checkLastEl.includes('A')) {
 			time.unshift('00');
+			time.pop();
+			time.push(seconds);
 		}
 
 		time.splice(1, 1);
@@ -50,4 +58,4 @@ function timeConversion(s) {
 
 //console.log(newTime);
 
-timeConversion('07:05:45PM');
+timeConversion('08:05:15PM');
