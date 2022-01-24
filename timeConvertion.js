@@ -34,7 +34,7 @@ function timeConversion(s) {
 		}
 
 		time.splice(1, 1);
-		console.log(time);
+		console.log(time.join(':'));
 	}
 }
 
@@ -42,4 +42,4 @@ function timeConversion(s) {
 
 //console.log(newTime);
 
-timeConversion('01:00:00AM');
+timeConversion('09:00:00PM');
