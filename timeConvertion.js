@@ -50,6 +50,21 @@ function timeConversion(s) {
 			time.pop();
 			time.push(seconds);
 		}
+		if (time[0] === '12' && checkLastEl.includes('P')) {
+			time.unshift('12');
+			time.pop();
+			time.push(seconds);
+		}
+		if (time[0] === '02') {
+			time.unshift('14');
+			time.pop();
+			time.push(seconds);
+		}
+		if (time[0] === '04') {
+			time.unshift('16');
+			time.pop();
+			time.push(seconds);
+		}
 
 		time.splice(1, 1);
 		console.log(time.join(':'));
@@ -60,4 +75,4 @@ function timeConversion(s) {
 
 //console.log(newTime);
 
-timeConversion('06:40:03AM');
+timeConversion('02:34:50PM');
