@@ -7,13 +7,11 @@ function gradingStudents(grades) {
 		if (element < 40) {
 			return;
 		}
-    if (element % 5 < 3)
-    {
-      // 10 - second element of array , if less than 3 add it to array element .
-		}
+		let rem = element / 10;
+		console.log(10 - Math.ceil(rem));
 	});
 
-	console.log(roundedArr);
+	//console.log(roundedArr);
 }
 
 gradingStudents([73, 67, 38, 33]);
