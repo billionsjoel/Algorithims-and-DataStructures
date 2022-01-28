@@ -1,3 +1,6 @@
-		time.pop();
-		time.push(seconds);
-		console.log(time.join(':'));
+		if (rem < 3) {
+			roundedArr.push(element + rem);
+		} else {
+			roundedArr.push(element);
+		}
+	});
