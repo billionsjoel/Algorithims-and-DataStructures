@@ -4,19 +4,19 @@ function gradingStudents(grades) {
 	//if grade - grade5 < 3 grade === grade5
 	let roundedArr = [];
 	grades.forEach((element) => {
-		if (element < 40) {
-			return;
-		}
 		//console.log(element % 5);
 
-		if (element % 5 === 3) {
-			roundedArr.push(element + 2);
-		}
-		if (element % 5 === 4) {
-			roundedArr.push(element + 1);
-		}
+		//if (element < 38) {
+		//	roundedArr.push(element);
+		//}
 
-		if (element % 5 < 3) {
+		if (element % 5 === 3 && element >= 38) {
+			roundedArr.push(element + 2);
+		} else if (element % 5 === 4 && element >= 38) {
+			roundedArr.push(element + 1);
+		} else if (element % 5 < 3) {
+			roundedArr.push(element);
+		} else {
 			roundedArr.push(element);
 		}
 	});
@@ -24,4 +24,4 @@ function gradingStudents(grades) {
 	console.log(roundedArr);
 }
 
-gradingStudents([71, 72, 73, 74, 75, 76, 77, 78, 79]);
+gradingStudents([73, 67, 38, 33]);
