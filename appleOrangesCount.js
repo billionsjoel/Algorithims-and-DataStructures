@@ -6,24 +6,25 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 	let orangeCount = 0;
 
 	apples.forEach((element) => {
-		appleDistances.push(element + a[0]);
+		appleDistances.push(element + a);
 	});
 	oranges.forEach((element) => {
-		orangeDistances.push(element + a[1]);
+		orangeDistances.push(element + b);
 	});
 
 	appleDistances.forEach((element) => {
 		if (element >= s && element <= t) {
-			appleCount++;
+			appleCount += 1;
 		}
 	});
 	orangeDistances.forEach((element) => {
 		if (element >= s && element <= t) {
-			orangeCount++;
+			orangeCount += 1;
 		}
 	});
 
-	console.log([appleCount, orangeCount]);
+	console.log(appleCount);
+	console.log(orangeCount);
 }
 
-countApplesAndOranges(7, 11, [5, 15], [3, 2], [-2, 2, 1], [5, -6]);
+countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
