@@ -1,5 +1,6 @@
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
 	// Write your code here
+
 	let appleDistances = [];
 	let orangeDistances = [];
 	let appleCount = 0;
