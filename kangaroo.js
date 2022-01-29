@@ -1,12 +1,12 @@
 function kangaroo(x1, v1, x2, v2) {
 	// Write your code here
-	let distances = x2 - x1;
-	let velocities = v2 - v1;
+	let smallJumps = x2 - x1;
+	let velocities = v1 - v2;
 
-	if (distances % velocities === 0) {
-		console.log('Yes');
+	if (smallJumps % velocities === 0 && v1 > v2) {
+		return 'YES';
 	} else {
-		console.log('NO');
+		return 'NO';
 	}
 }
 
