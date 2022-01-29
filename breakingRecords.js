@@ -13,6 +13,8 @@ function breakingRecords(scores) {
 		if (element < scores[0]) {
 			low += 1;
 			scores[0] = element;
+		} else {
+			low = 0;
 		}
 	});
 
@@ -22,4 +24,4 @@ function breakingRecords(scores) {
 	console.log(arr);
 }
 
-breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
+breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]);
