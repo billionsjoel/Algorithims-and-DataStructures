@@ -20,6 +20,12 @@ function getTotalX(a, b) {
 	for (let i = min; i <= max; i++) {
 		let result = true;
 
+		for (let doubleIndex = 0; doubleIndex < a.length; doubleIndex++) {
+			if (i % a[doubleIndex] !== 0) {
+				result = false;
+				break;
+			}
+		}
 
 
 
