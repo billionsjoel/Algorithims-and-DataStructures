@@ -5,7 +5,11 @@ function getTotalX(a, b) {
 	let count = 0;
 	let max = 100;
 
-
+	a.forEach((element) => {
+		if (element > min) {
+			min = element;
+		}
+	});
 
 
 
