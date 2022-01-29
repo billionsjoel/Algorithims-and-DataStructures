@@ -9,7 +9,12 @@ function breakingRecords(scores) {
 			scores[0] = element;
 		}
 	});
-
+	scores.forEach((element) => {
+		if (element < scores[0]) {
+			low += 1;
+			scores[0] = element;
+		}
+	});
 
 
 
