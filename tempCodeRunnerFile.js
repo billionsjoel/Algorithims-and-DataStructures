@@ -1,6 +1,6 @@
-		if (rem < 3) {
-			roundedArr.push(element + rem);
-		} else {
-			roundedArr.push(element);
-		}
-	});
+	//scores.forEach((element) => {
+	//	if (element > scores[0]) {
+	//		high += 1;
+	//		scores[0] = element;
+	//	}
+	//});
