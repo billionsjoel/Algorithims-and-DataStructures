@@ -35,7 +35,9 @@ function getTotalX(a, b) {
 				}
 			}
 		}
-
+		if (result) {
+			count++;
+		}
 	}
 
 }
