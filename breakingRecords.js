@@ -4,27 +4,19 @@ function breakingRecords(scores) {
 	let lowCount = 0;
 	let low = scores[0];
 	let high = scores[0];
-	let arr = [];
 
 	scores.forEach((element) => {
 		if (element > high) {
 			highCount++;
 			high = element;
 		}
-	});
-
-	scores.forEach((element) => {
 		if (element < low) {
 			lowCount++;
 			low = element;
-			//console.log(scores[0]);
 		}
 	});
 
-	arr.push(highCount);
-	arr.push(lowCount);
-
-	console.log(arr);
+	return [highCount, lowCount];
 }
 
 breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
