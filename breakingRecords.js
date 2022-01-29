@@ -19,7 +19,7 @@ function breakingRecords(scores) {
 	arr.push(high);
 	arr.push(low);
 
-	console.log(arr);
+	return arr;
 }
 
 breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
