@@ -39,7 +39,7 @@ function getTotalX(a, b) {
 			count++;
 		}
 	}
-
+	console.log(count);
 }
 
 getTotalX([2, 4], [16, 32, 96]);
