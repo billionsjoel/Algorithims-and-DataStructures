@@ -16,7 +16,8 @@ function breakingRecords(scores) {
 		}
 	});
 
-
+	arr.push(high);
+	arr.push(low);
 
 	console.log(arr);
 }
