@@ -17,6 +17,8 @@ function getTotalX(a, b) {
 		}
 	});
 
+	console.log(min);
+	console.log(max);
 }
 
 getTotalX([2, 4], [16, 32, 96]);
