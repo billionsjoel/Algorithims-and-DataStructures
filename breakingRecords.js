@@ -1,27 +1,31 @@
 function breakingRecords(scores) {
 	// Write your code here
-	let high = 0;
-	let low = 0;
+	let highCount = 0;
+	let lowCount = 0;
+	let low = scores[0];
+	let high = scores[0];
 	let arr = [];
+
 	scores.forEach((element) => {
-		if (element > scores[0]) {
-			high += 1;
-			scores[0] = element;
-		}
-	});
-	scores.forEach((element) => {
-		if (element < scores[0]) {
-			low += 1;
-			scores[0] = element;
-		} else {
-			low = 0;
+		if (element > high) {
+			highCount++;
+			high = element;
 		}
 	});
 
-	arr.push(high);
-	arr.push(low);
+	scores.forEach((element) => {
+		if (element < low) {
+			lowCount++;
+			low = element;
+			//console.log(scores[0]);
+		}
+	});
+
+	arr.push(highCount);
+	arr.push(lowCount);
 
 	console.log(arr);
 }
 
+breakingRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
 breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]);
