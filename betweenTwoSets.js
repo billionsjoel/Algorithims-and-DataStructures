@@ -11,7 +11,11 @@ function getTotalX(a, b) {
 		}
 	});
 
-
+	b.forEach((element) => {
+		if (element < max) {
+			max = element;
+		}
+	});
 
 }
 
