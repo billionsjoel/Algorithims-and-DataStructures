@@ -27,7 +27,14 @@ function getTotalX(a, b) {
 			}
 		}
 
-
+		if (result) {
+			for (let doubleIndex = 0; doubleIndex < b.length; doubleIndex++) {
+				if (b[doubleIndex] % i !== 0) {
+					result = false;
+					break;
+				}
+			}
+		}
 
 	}
 
