@@ -1,8 +1,18 @@
 function birthday(s, d, m) {
 	// Write your code here
-	console.log(s.slice(0, m));
-	console.log(s.splice(m, m));
-	console.log(s.splice(m, m));
+	let sum = 0;
+	let count = 0;
+
+
+	for (let i = 0; i < s.length; i++) {
+		sum = s[i] + s[i + 1];
+		if (sum === d) {
+			count++;
+		}
+	}
+
+	//console.log(count);
+	console.log(count);
 }
 
-birthday([1, 2, 1, 3, 2], 3, 2);
+birthday([4], 4, 1);
