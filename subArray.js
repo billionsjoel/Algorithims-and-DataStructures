@@ -1,17 +1,11 @@
 function birthday(s, d, m) {
 	// Write your code here
-	let sum = 0;
 	let count = 0;
-	if (s.length <= 1) {
-		sum = s[0];
-		if (sum === d) {
-			count += 1;
-		}
-	}
 
 	for (let i = 0; i < s.length; i++) {
-		sum = s[i] + s[i + 1];
-		if (sum === d) {
+		let arr = s.slice(0 + i, m + i);
+
+		if (arr.reduce((a, b) => a + b) === d) {
 			count++;
 		}
 	}
