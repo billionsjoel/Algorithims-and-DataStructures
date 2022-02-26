@@ -8,6 +8,9 @@ function dayOfProgrammer(year) {
 	// the year is already given
 	let Calender = '';
 	let monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	let sum = 0;
+	let i = 0;
+
 	if (year < 1918 && year >= 1700) {
 		Calender = 'julian';
 	} else if (year === 1918) {
@@ -15,9 +18,37 @@ function dayOfProgrammer(year) {
 	} else {
 		Calender = 'gregorian';
 	}
+	while (256 - sum > 30) {
+		if (i === 1) {
+			if (Calender === 'gregorian') {
+				if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+					sum += monthDays[i] + 1;
+				} else {
+					sum += monthDays[i];
+				}
+			} else if (Calender === 'julian') {
+				if (year % 4 === 0) {
+					sum += monthDays[i] + 1;
+				} else {
+					sum += monthDays[i];
+				}
+			} else {
+				sum += monthDays[i] + 13;
+			}
+		} else {
+			sum += monthDays[i];
+		}
+		i++;
+	}
+
+	if (sum - 256 === 0) {
+		console.log(`${monthDays[i - 1]}`);
+	}
+	console.log(sum - 256);
 
 	//return the year in the form dd.mm.yyyy
 }
-dayOfProgrammer(2017);
+//dayOfProgrammer(2017);
 //dayOfProgrammer(2016);
 //dayOfProgrammer(1800);
+dayOfProgrammer(1918);
