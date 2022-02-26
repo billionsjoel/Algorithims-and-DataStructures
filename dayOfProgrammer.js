@@ -39,9 +39,7 @@ function dayOfProgrammer(year) {
 
 	sum - 256 === 0
 		? (programmerDate = `${monthDays[i - 1]}.0${i}.${year}`)
-		: (programmerDate = `${256 - sum}.${i + 1}.${year}`);
-
-	//console.log(sum - 256);
+		: (programmerDate = `${256 - sum}.0${i + 1}.${year}`);
 
 	//return the year in the form dd.mm.yyyy
 	console.log(programmerDate);
