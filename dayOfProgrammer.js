@@ -7,7 +7,8 @@ function dayOfProgrammer(year) {
 	// month is [the counter for the previous month summations + 1]
 	// the year is already given
 	let Calender = '';
-	let monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	let programmerDate = '';
+	const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 	let sum = 0;
 	let i = 0;
 
@@ -42,13 +43,17 @@ function dayOfProgrammer(year) {
 	}
 
 	if (sum - 256 === 0) {
-		console.log(`${monthDays[i - 1]}`);
+		programmerDate = `${monthDays[i - 1]}.${i}.${year}`;
+	} else {
+		programmerDate = `${256 - sum}.${i + 1}.${year}`;
 	}
-	console.log(sum - 256);
+	//console.log(sum - 256);
 
 	//return the year in the form dd.mm.yyyy
+	console.log(programmerDate);
 }
-//dayOfProgrammer(2017);
-//dayOfProgrammer(2016);
-//dayOfProgrammer(1800);
+dayOfProgrammer(2017);
+dayOfProgrammer(2016);
+dayOfProgrammer(1800);
+dayOfProgrammer(1801);
 dayOfProgrammer(1918);
