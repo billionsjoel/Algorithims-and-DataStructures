@@ -7,6 +7,7 @@ function dayOfProgrammer(year) {
 	// month is [the counter for the previous month summations + 1]
 	// the year is already given
 	let Calender = '';
+	let monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 	if (year < 1918 && year >= 1700) {
 		Calender = 'julian';
 	} else if (year === 1918) {
