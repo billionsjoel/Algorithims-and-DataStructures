@@ -28,7 +28,7 @@ function dayOfProgrammer(year) {
 		if (i === 1) {
 			if (Calender === 'transition') {
 				sum += monthDays[i] - 13;
-			} else {
+			} else {cd 
 				if (leapYear) sum += monthDays[i] + 1;
 				else sum += monthDays[i];
 			}
