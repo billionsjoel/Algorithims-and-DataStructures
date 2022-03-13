@@ -5,7 +5,8 @@ function pageCount(n, p) {
 
 		p = p % 2 === 0 ? p : p - 1;
 		n = n % 2 === 0 ? n : n - 1;
-
+		countFromStart = p / 2;
+		countFromEnd = (n - p) / 2;
 
 
 }
