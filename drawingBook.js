@@ -8,7 +8,7 @@ function pageCount(n, p) {
 		countFromStart = p / 2;
 		countFromEnd = (n - p) / 2;
 
-
+		return countFromStart <= countFromEnd ? countFromStart : countFromEnd;
 }
 
 pageCount(6, 2);
